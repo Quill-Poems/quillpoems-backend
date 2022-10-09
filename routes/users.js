@@ -1,7 +1,7 @@
 // @ts-nocheck
 const express = require('express')
 const router = express.Router()
-import prisma from "../lib/prisma"
+const prisma = require('../lib/prisma')
 const { excludePassword } = require('../utils/users')
 
 router.get('/', async (req, res) => {

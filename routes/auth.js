@@ -1,8 +1,7 @@
 // @ts-nocheck
 const express = require('express')
 const router = express.Router()
-import { title } from "process"
-import prisma from "../lib/prisma"
+const prisma = require('../lib/prisma')
 const { createUser } = require('../utils/tokens')
 const security = require('../middleware/security')
 const { loginFields, registerFields, emailRegex } = require('../lib/fields')

@@ -1,8 +1,7 @@
 // @ts-nocheck
 const express = require('express')
 const router = express.Router()
-import { title } from "process"
-import prisma from "../lib/prisma"
+const prisma = require('../lib/prisma')
 const security = require('../middleware/security')
 
 router.get('/:postid', async (req, res) => {
