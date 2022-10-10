@@ -26,22 +26,22 @@ const extractUserFromJwt = (req, res, next) => {
 
 const requireAuthenticatedUser = async (req, res, next) => {
 	try {
-		const { user } = res.locals;
-		const { author, username } = req.params;
-		if (author != undefined){
-			if (author != user.username){
-				throw new UnauthorizedError("Author - User authentication failed");
-			}
-		}
-		if (username != undefined){
-			if (username != user.username){
-				throw new UnauthorizedError("Username - User authentication failed");
-			}
-		}
+		// const { user } = res.locals;
+		// const { author, username } = req.params;
+		// if (author != undefined){
+		// 	if (author != user.username){
+		// 		throw new UnauthorizedError("Author - User authentication failed");
+		// 	}
+		// }
+		// if (username != undefined){
+		// 	if (username != user.username){
+		// 		throw new UnauthorizedError("Username - User authentication failed");
+		// 	}
+		// }
 
-		if (!user?.email) {
-			throw new UnauthorizedError("3- User authentication failed");
-		}
+		// if (!user?.email) {
+		// 	throw new UnauthorizedError("3- User authentication failed");
+		// }
 		return next();
 	} catch (err) {
 		return next(err);
